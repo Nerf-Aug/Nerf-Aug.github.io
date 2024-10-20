@@ -55,12 +55,12 @@ with Neural Radiance Fields</h1>
             <span class="author-block">
               <a href="">Eric Zhu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">Mara Levy</a><sup>1</sup>,</span>
+              <a href="https://mlevy2525.github.io/">Mara Levy</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">Matthew Gwilliam</a><sup>1</sup>,
+              <a href="https://mgwillia.github.io/">Matthew Gwilliam</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Abhinav Shrivastava</a><sup>1</sup>
+              <a href="https://www.cs.umd.edu/~abhinav/">Abhinav Shrivastava</a><sup>1</sup>
             </span>
           </div>
 
@@ -72,7 +72,7 @@ with Neural Radiance Fields</h1>
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="figures/nerf_aug_icra_2025.pdf" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -86,27 +86,18 @@ with Neural Radiance Fields</h1>
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+                  <span>arXiv (Coming Soon)</span>
                 </a>
               </span>
               <!-- Code Link. -->
               <span class="link-block">
                 <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark"
+                   >
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon)</span>
                   </a>
               </span>            
             </div>
@@ -119,19 +110,58 @@ with Neural Radiance Fields</h1>
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="Teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
+  <div class="container is-max-desktop" style="line-height: 1.5;"">
+    <!-- <h2 class="title is-3">Video</h2> -->
+    <video id="teaser" autoplay controls height="100%">
+      <source src="figures/Teaser.mp4"
+              type="video/mp4">
+    </video>
   </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Training a policy that can generalize to unknown
+            objects is a long standing challenge within the field of robotics.
+            The performance of a policy often drops significantly in
+            situations where an object in the scene was not seen during
+            training. To solve this problem, we present NeRF-Aug, a novel
+            method that is capable of teaching a policy to interact with
+            objects that are not present in the dataset. This approach
+            differs from existing approaches by leveraging the speed and
+            photorealism of a neural radiance field for augmentation. NeRF-Aug
+            both creates more photorealistic data and runs 3.83 times
+            faster than existing methods. We demonstrate the effectiveness
+            of our method on 4 tasks with 11 novel objects that have
+            no expert demonstration data. We achieve an average 69.1%
+            success rate increase over existing methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Overview</h2>
+    </div>
+    <!-- Methods Figure. -->
+    <div class="columns is-centered has-text-centered">
+        <div style="width: 100%; margin: 20px auto; overflow: hidden;">
+          <img src="figures/Overview.png" alt="Image not available" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+    <!--/ Abstract. -->
 </section>
 
 
@@ -192,61 +222,7 @@ with Neural Radiance Fields</h1>
   </div>
 </section> -->
 
-
-<!-- <section class="section">
-  <div class="container is-max-desktop"> -->
-    <!-- Abstract. -->
-<!--     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-<!--     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
-<!--   </div>
-</section>
-
-
+<!-- 
 <section class="section">
   <div class="container is-max-desktop">
 
