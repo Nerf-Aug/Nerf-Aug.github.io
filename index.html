@@ -150,7 +150,19 @@ with Neural Radiance Fields</h1>
     </div>
 </section>
 
-<section class="hero is-light is-small">
+<section class="hero is-light is-small" style="background-color: white;">
+  <div>
+    <div class="columns is-centered has-text-centered" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 40px;">
+      <h2 class="title is-3">List of Objects Used in Experiments</h2>
+      <h3 class="title is-3" style="font-size: 1.2rem;">Novel Objects On Left, Original Objects On Right</h3>
+    </div>
+    <div style="width: 70%; margin: 20px auto; overflow: hidden; border-radius: 10px">
+      <img src="figures/objects.jpg" alt="Image not available" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small" style="background-color: white;">
   <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 40px;">
     <h2 class="title is-3">NeRF-Aug Before (Left) and After (Right)</h2>
   </div>
@@ -178,27 +190,53 @@ with Neural Radiance Fields</h1>
           </video>
         </div>
         <div class="item item-steve" style="align-items: center; display: flex; justify-content: center; padding: 0%;">
-          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
-            <source src="./figures/gripper_original.mp4"
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="50%" max-width="50%">
+            <source src="./nerf_aug/original_cook_with_pot.mp4"
                     type="video/mp4">
           </video>
-          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="50%" max-width="50%">
             <source src="./figures/gripper_remote.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-steve" style="align-items: center; display: flex; justify-content: center; padding: 0%;">
-          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="50%" max-width="50%">
             <source src="./figures/gripper_original.mp4"
                     type="video/mp4">
           </video>
-          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="50%" max-width="50%">
             <source src="./figures/gripper_spatula.mp4"
                     type="video/mp4">
           </video>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+
+<!-- section for video of successes -->
+<section>
+  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 10px;">
+    <h2 class="title is-3">Trials on Novel Objects</h2>
+  </div>
+  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 10px;">
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding: 30px; max-width: 1000px; align-items: center;">
+      <div style="flex: 1 1 30%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
+          <p style="font-size: 18px; margin-top: 10px; color: #333;">Put "Swiss Miss Box" in Chest</p>
+          <video src="./train_policy_runs/swiss_miss.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
+      </div>
+      <div style="flex: 1 1 30%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
+          <p style="font-size: 18px; margin-top: 10px; color: #333;">Remove "Red Spatula" from Pan</p>
+          <video src="./train_policy_runs/red_spoon.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
+      </div>
+      <div style="flex: 1 1 30%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
+        <p style="font-size: 18px; margin-top: 10px; color: #333;">Cook With Pot Using "Sugar Box"</p>
+        <video src="./train_policy_runs/sugar_box.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
+    </div>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -211,41 +249,6 @@ with Neural Radiance Fields</h1>
     <img src="figures/success_table.png" alt="Image not available" style="max-width: 75%;">
   </div>
 </section>
-
-<!-- section for video of successes -->
-<section>
-  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 10px;">
-    <h2 class="title is-3">Trials on Novel Objects</h2>
-  </div>
-  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 10px;">
-    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding: 30px; max-width: 1000px; align-items: center;">
-      <div style="flex: 1 1 20%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
-          <p style="font-size: 18px; margin-top: 10px; color: #333;">Put "Swiss Miss Box" in Chest</p>
-          <video src="./train_policy_runs/swiss_miss.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
-      </div>
-      <div style="flex: 1 1 20%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
-          <p style="font-size: 18px; margin-top: 10px; color: #333;">Remove "Red Spatula" from Pan</p>
-          <video src="./train_policy_runs/red_spoon.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
-      </div>
-      <div style="flex: 1 1 20%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
-        <p style="font-size: 18px; margin-top: 10px; color: #333;">Cook With Pot Using "Sugar Box"</p>
-        <video src="./train_policy_runs/sugar_box.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
-    </div>
-    </div>
-  </div>
-  </div>
-  <div>
-    <div class="columns is-centered has-text-centered" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 40px;">
-      <h2 class="title is-3">List of Objects Used in Experiments</h2>
-      <h3 class="title is-3" style="font-size: 1.2rem;">Novel Objects On Left, Original Objects On Right</h3>
-    </div>
-    <div style="width: 70%; margin: 20px auto; overflow: hidden; border-radius: 10px">
-      <img src="figures/objects.jpg" alt="Image not available" style="max-width: 100%; height: auto;">
-    </div>
-  </div>
-</section>
-
-
 
 <!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
