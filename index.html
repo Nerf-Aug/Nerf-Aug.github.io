@@ -72,7 +72,7 @@ with Neural Radiance Fields</h1>
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="figures/nerf_aug_icra_2025.pdf" target="_blank"
+                <a href="figures/paper.pdf" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -113,7 +113,7 @@ with Neural Radiance Fields</h1>
   <div class="container is-max-desktop" style="line-height: 1.5; border-radius: 10px;">
     <!-- <h2 class="title is-3">Video</h2> -->
     <video id="teaser" autoplay controls height="100%" style="border-radius: 20px">
-      <source src="figures/Teaser.mp4"
+      <source src="figures/Overview_Video.mp4"
               type="video/mp4">
     </video>
   </div>
@@ -127,20 +127,7 @@ with Neural Radiance Fields</h1>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Training a policy that can generalize to unknown
-            objects is a long standing challenge within the field of robotics.
-            The performance of a policy often drops significantly in
-            situations where an object in the scene was not seen during
-            training. To solve this problem, we present NeRF-Aug, a novel
-            method that is capable of teaching a policy to interact with
-            objects that are not present in the dataset. This approach
-            differs from existing approaches by leveraging the speed and
-            photorealism of a neural radiance field for augmentation. NeRF-Aug
-            both creates more photorealistic data and runs 3.83 times
-            faster than existing methods. We demonstrate the effectiveness
-            of our method on 4 tasks with 11 novel objects that have
-            no expert demonstration data. We achieve an average 69.1%
-            success rate increase over existing methods.
+            Training a policy that can generalize to unknown objects is a long standing challenge within the field of robotics. The performance of a policy often drops significantly in situations where an object in the scene was not seen during training. To solve this problem, we present NeRF-Aug, a novel method that is capable of teaching a policy to interact with objects that are not present in the dataset. This approach differs from existing approaches by leveraging the speed, photorealism, and 3D consistency of a neural radiance field for augmentation. NeRF-Aug both creates more photorealistic data and runs 63% faster than existing methods. We demonstrate the effectiveness of our method on 5 tasks with 9 novel objects that are not present in the expert demonstrations. We achieve an average performance boost of 55.6% when comparing our method to the next best method.
           </p>
         </div>
       </div>
@@ -163,32 +150,30 @@ with Neural Radiance Fields</h1>
     </div>
 </section>
 
-
-<div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-  <h2 class="title is-3">Data Augmentation Demo</h2>
-  <p> Original demonstration on the left, NeRF-Aug on the right</p>
-</div>
 <section class="hero is-light is-small">
+  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 40px;">
+    <h2 class="title is-3">NeRF-Aug Before (Left) and After (Right)</h2>
+  </div>
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve" style="align-items: center; display: flex; justify-content: center; padding: 0%;">
-          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
-            <source src="./figures/gripper_original.mp4"
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="50%" max-width="50%">
+            <source src="./nerf_aug/original_put_in_chest.mp4"
                     type="video/mp4">
           </video>
-          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
-            <source src="./figures/gripper_bottle.mp4"
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="50%" max-width="50%">
+            <source src="./nerf_aug/swiss_miss.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-steve" style="align-items: center; display: flex; justify-content: center; padding: 0%;">
-          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
-            <source src="./figures/gripper_original.mp4"
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="50%" max-width="50%">
+            <source src="./nerf_aug/original_remove.mp4"
                     type="video/mp4">
           </video>
-          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
-            <source src="./figures/gripper_eraser.mp4"
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="50%" max-width="50%">
+            <source src="./nerf_aug/remove_red_spoon.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -223,38 +208,36 @@ with Neural Radiance Fields</h1>
     <h2 class="title is-3">Results</h2>
   </div>
   <div class="container is-centered" style="justify-content: center; align-items: center; display: flex; margin: 40px auto">
-    <img src="figures/success_rates_table.png" alt="Image not available" style="max-width: 75%;">
+    <img src="figures/success_table.png" alt="Image not available" style="max-width: 75%;">
   </div>
 </section>
 
 <!-- section for video of successes -->
 <section>
-  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 40px;">
+  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 10px;">
     <h2 class="title is-3">Trials on Novel Objects</h2>
   </div>
-  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 40px;">
+  <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 10px;">
     <div style="display: flex; justify-content: space-around; flex-wrap: wrap; padding: 30px; max-width: 1000px; align-items: center;">
       <div style="flex: 1 1 20%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
-          <video src="./figures/trial_bottle.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
-          <p>Video 1</p>
+          <p style="font-size: 18px; margin-top: 10px; color: #333;">Put "Swiss Miss Box" in Chest</p>
+          <video src="./train_policy_runs/swiss_miss.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
       </div>
       <div style="flex: 1 1 20%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
-          <video src="./figures/trial_remote.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
-          <p>Video 2</p>
+          <p style="font-size: 18px; margin-top: 10px; color: #333;">Remove "Red Spatula" from Pan</p>
+          <video src="./train_policy_runs/red_spoon.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
       </div>
       <div style="flex: 1 1 20%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
-          <video src="./figures/trial_spatula.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
-          <p>Video 3</p>
-      </div>
-      <div style="flex: 1 1 20%; min-width: 200px; margin: 10px; text-align: center; border-radius: 10px">
-        <video src="./figures/trial_eraser.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
-        <p>Video 3</p>
+        <p style="font-size: 18px; margin-top: 10px; color: #333;">Cook With Pot Using "Sugar Box"</p>
+        <video src="./train_policy_runs/sugar_box.mp4" poster="" id="steve" autoplay controls muted playsinline width="100%" style="border-radius: 10px">
     </div>
     </div>
   </div>
+  </div>
   <div>
-    <div class="columns is-centered has-text-centered" style="display: flex; justify-content: center; align-items: center; margin: 40px;">
+    <div class="columns is-centered has-text-centered" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 40px;">
       <h2 class="title is-3">List of Objects Used in Experiments</h2>
+      <h3 class="title is-3" style="font-size: 1.2rem;">Novel Objects On Left, Original Objects On Right</h3>
     </div>
     <div style="width: 70%; margin: 20px auto; overflow: hidden; border-radius: 10px">
       <img src="figures/objects.jpg" alt="Image not available" style="max-width: 100%; height: auto;">
